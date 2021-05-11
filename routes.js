@@ -19,6 +19,12 @@ function routes(app) {
         res.send(cards);
     })
 
+    app.post('/card', (req, res) => {
+        const card = req.body;
+        cards.push({ id: Math.random().toString(), ...card });
+        res.send('Card created')
+    })
+
     app.patch('/card/:cardId', (req, res) => {
         const cardId = req.params.cardId;
         const card = req.body;
