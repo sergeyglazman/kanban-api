@@ -16,10 +16,7 @@ function cardCreate(req, res) {
         .catch((err) => {
             console.log(err);
             res.status(400).json('Card was not created');
-        })
-        .finally(() => {
-        console.log('The end');
-    });
+        });
 }
 
 module.exports = cardCreate;
