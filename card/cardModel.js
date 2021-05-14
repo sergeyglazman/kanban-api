@@ -23,12 +23,10 @@ const cardSchema = new Schema({
         type: Number,
         select: true,
         required: true,
-    },
-    timestamps: {
-        createdAt: 'created_at',
-        updatedAt: 'updated_at'
     }
 });
+
+cardSchema.set('timestamps', true);
 
 module.exports = mongoose.model('Card', cardSchema)
 
