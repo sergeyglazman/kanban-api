@@ -23,6 +23,10 @@ const cardSchema = new Schema({
         type: Number,
         select: true,
         required: true,
+    },
+    timestamps: {
+        createdAt: 'created_at',
+        updatedAt: 'updated_at'
     }
 });
 
