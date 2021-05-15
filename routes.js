@@ -7,7 +7,7 @@ const cardUpdateById = require("./card/cardUpdateById");
 function routes(app) {
 
     app.get('/', (req, res) => {
-        res.send('Hello World!')
+        res.send('Hello!')
     })
 
     app.get('/card', cardGetAll);
